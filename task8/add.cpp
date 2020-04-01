@@ -6,9 +6,8 @@ using namespace std;
 void change_groups(string arr[], int rows) {
 	char small_letters[] = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюяэыёъ";
 	char big_letters[] = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЧЭЫЁЪ";
-	int letter_len = sizeof(big_letters) / sizeof(big_letters[0]);
-	int stringlen; string str;
-	string checkch; // checkch = (check)(ch)ange
+	int letter_len = sizeof(big_letters) / sizeof(big_letters[0]), stringlen; 
+	string str, checkch; // checkch = (check)(ch)ange
 	bool dec = true;
 	for (int i = 0; i < rows; i++) {
 		str = arr[i];
@@ -17,8 +16,15 @@ void change_groups(string arr[], int rows) {
 		for (int ii = 0; ii < stringlen; ii++) {
 			for (int j = 0; j < 37; j++) {
 
-				if (str[ii] == small_letters[j]) { checkch = checkch + big_letters[j]; dec = false; break; }
-				else if (str[ii] == big_letters[j]) { checkch = checkch + small_letters[j]; dec = false; break; }
+				if (str[ii] == small_letters[j]) { 
+					checkch = checkch + big_letters[j]; 
+					dec = false; 
+					break; 
+				}
+				else if (str[ii] == big_letters[j]) { 
+					checkch = checkch + small_letters[j]; 
+					dec = false; 
+					break; }
 				else { dec = true; }
 			}
 			if (dec) { checkch = checkch + str[ii]; }
@@ -39,7 +45,6 @@ int count_groups(string arr[]) {
 // функція для читання символів
 void read_groups(string arr[], int rows) {
 	string checkr = ""; 
-	bool dec = true;
 	for (int i = 0; i < rows; i++) {
 		cout << "Введіть стрічки без пробілів для групи " << i + 1 << ". Для закінчення вводу введіть крапку ('.')" << endl;
 		getline(cin, checkr);
