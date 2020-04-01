@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-//функція для зміни знаків
+//Функція для зміни знаків.
 void change_groups(string arr[], int rows) {
 	char small_letters[] = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюяэыёъ";
 	char big_letters[] = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЧЭЫЁЪ";
@@ -33,7 +33,7 @@ void change_groups(string arr[], int rows) {
 	}
 }
 
-// функція для перерахунку заповнених груп в масиві
+// Функція для перерахунку заповнених груп в масиві.
 int count_groups(string arr[]) {
 	int i = 0;
 	while (arr[i] != "" && i < 10) {
@@ -42,7 +42,7 @@ int count_groups(string arr[]) {
 	return i;
 }
 
-// функція для читання символів
+// Функція для читання символів.
 void read_groups(string arr[], int rows) {
 	string checkr = ""; 
 	for (int i = 0; i < rows; i++) {
@@ -63,7 +63,7 @@ void read_groups(string arr[], int rows) {
 	}
 }
 
-// Функція для виведення масиву
+// Функція для виведення масиву.
 void write_groups(string arr[], int count) {
 	for (int i = 0; i < count; i++) {
 		cout << "[" << i+1 << "] = " << arr[i] << endl;
