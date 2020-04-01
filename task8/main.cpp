@@ -6,8 +6,6 @@ using namespace std;
 int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	char small_letters[] = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюяэыёъ";
-	char big_letters[] = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЧЭЫЁЪ";
 	int unsigned const rows = 10;
 	string arr[rows];
 	read_groups(arr, rows);
